@@ -1,11 +1,11 @@
-* text=auto eol=lf
+# GitHub Linguist overrides
 
-*.blade.php diff=html
-*.css diff=css
-*.html diff=html
-*.md diff=markdown
-*.php diff=php
+*.blade.php linguist-language=PHP
 
-/.github export-ignore
-CHANGELOG.md export-ignore
-.styleci.yml export-ignore
+resources/views/**/*.blade.php linguist-language=PHP
+
+*.css linguist-language=CSS
+
+*.js linguist-language=JavaScript
+
+*.vue linguist-language=JavaScript
