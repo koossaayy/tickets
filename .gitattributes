@@ -1,11 +1,11 @@
-# GitHub Linguist overrides
+# GitHub Linguist settings
 
-*.blade.php linguist-language=PHP
-
-resources/views/**/*.blade.php linguist-language=PHP
+*.blade.php linguist-language=Blade
 
 *.css linguist-language=CSS
 
 *.js linguist-language=JavaScript
 
-*.vue linguist-language=JavaScript
+/node_modules/* linguist-vendored
+/vendor/* linguist-vendored
+/storage/* linguist-vendored
