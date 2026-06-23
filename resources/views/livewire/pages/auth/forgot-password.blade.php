@@ -1,0 +1,119 @@
+<?php
+
+use App\Services\RecaptchaService;
+use Illuminate\Support\Facades\Password;
+use Livewire\Attributes\Layout;
+use Livewire\Volt\Component;
+
+new #[Layout('layouts.guest')] class extends Component
+{
+    public string $email = '';
+
+    public string $recaptchaToken = '';
+
+    /**
+     * Send a password reset link to the provided email address.
+     */
+    public function sendPasswordResetLink(RecaptchaService $recaptcha): void
+    {
+        $this->validate([
+            'email' => ['required', 'string', 'email'],
+        ]);
+
+        if (! $recaptcha->verify($this->recaptchaToken, 'reset_password')) {
+            $this->addError('email', 'Security check failed. Please try again.');
+            return;
+        }
+
+        // We will send the password reset link to this user. Once we have attempted
+        // to send the link, we will examine the response then see the message we
+        // need to show to the user. Finally, we'll send out a proper response.
+        $status = Password::sendResetLink(
+            $this->only('email')
+        );
+
+        if ($status != Password::RESET_LINK_SENT) {
+            $this->addError('email', __($status));
+
+            return;
+        }
+
+        $this->reset('email');
+
+        session()->flash('status', __($status));
+    }
+}; ?>
+
+<div>
+    <!-- Page heading -->
+    <div class="mb-7">
+        <h1 class="text-xl font-bold text-white">Reset your password</h1>
+        <p class="text-sm text-slate-400 mt-1">
+            Enter your email and we'll send you a secure reset link.
+        </p>
+    </div>
+
+    <!-- Session Status -->
+    @if (session('status'))
+        <div class="mb-6 rounded-lg border px-4 py-3 text-sm flex items-center gap-2"
+             style="background:rgba(16,185,129,0.1); border-color:rgba(16,185,129,0.3); color:#6ee7b7;">
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            {{ session('status') }}
+        </div>
+    @endif
+
+    <form
+        x-data="{
+            submitForm() {
+                if (typeof grecaptcha === 'undefined' || !window.recaptchaSiteKey) {
+                    $wire.sendPasswordResetLink(); return;
+                }
+                grecaptcha.ready(() => {
+                    grecaptcha.execute(window.recaptchaSiteKey, { action: 'reset_password' }).then(token => {
+                        $wire.recaptchaToken = token;
+                        $wire.sendPasswordResetLink();
+                    });
+                });
+            }
+        }"
+        @submit.prevent="submitForm"
+    >
+        <input type="hidden" wire:model="recaptchaToken">
+        <!-- Email Address -->
+        <div>
+            <label for="email" class="auth-label">Email Address</label>
+            <input wire:model="email"
+                   id="email"
+                   type="email"
+                   name="email"
+                   required
+                   autofocus
+                   autocomplete="email"
+                   placeholder="you@example.com"
+                   class="auth-input block w-full rounded-lg px-4 py-2.5 text-sm focus:outline-none" />
+            @error('email')
+                <p class="mt-1.5 text-xs text-rose-400">{{ $message }}</p>
+            @enderror
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="auth-btn w-full">
+            <span wire:loading.remove wire:target="sendPasswordResetLink">Send Reset Link</span>
+            <span wire:loading wire:target="sendPasswordResetLink" class="flex items-center justify-center gap-2">
+                <svg class="animate-spin h-4 w-4" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+                </svg>
+                Sending…
+            </span>
+        </button>
+    </form>
+
+    <!-- Back to login -->
+    <p class="auth-footer">
+        Remember your password?
+        <a href="{{ route('login') }}" class="auth-link font-medium ml-1">Sign in</a>
+    </p>
+</div>
