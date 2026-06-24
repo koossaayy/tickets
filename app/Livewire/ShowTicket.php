@@ -52,7 +52,7 @@ class ShowTicket extends Component
         TicketAttachmentService $attachmentService,
         TicketNotificationService $notificationService,
     ): void {
-        abort_if($this->ticket->status->value === 'closed', 403, 'This ticket is closed.');
+        abort_if($this->ticket->status->value === 'closed', 403, __('This ticket is closed.'));
 
         $this->validate();
 
@@ -72,7 +72,7 @@ class ShowTicket extends Component
         $this->reset(['body', 'attachments']);
         $this->ticket->refresh()->load(['replies.user', 'replies.attachments', 'attachments']);
 
-        session()->flash('status', 'Your reply has been posted.');
+        session()->flash('status', __('Your reply has been posted.'));
     }
 
     public function render(): View

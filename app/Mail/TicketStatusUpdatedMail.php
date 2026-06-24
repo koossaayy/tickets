@@ -22,7 +22,7 @@ class TicketStatusUpdatedMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Ticket Update: '.$this->ticket->title.' is now '.$this->ticket->status->label(),
+            subject: __('Ticket Update: :title is now :label', ['title' => $this->ticket->title, 'label' => $this->ticket->status->label()]),
             replyTo: [$this->ticket->replyEmailAddress()],
         );
     }

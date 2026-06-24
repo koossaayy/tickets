@@ -111,7 +111,7 @@ class InboundEmailController extends Controller
             return [
                 'reply_token' => $token,
                 'from_email' => $request->string('sender')->toString(),
-                'from_name' => $request->string('From', 'Email User')->toString(),
+                'from_name' => $request->string('From', __('Email User'))->toString(),
                 'body' => $this->attachmentService->stripQuotedReply(
                     $request->string('body-plain')->toString()
                 ),
@@ -138,7 +138,7 @@ class InboundEmailController extends Controller
             return [
                 'reply_token' => $token,
                 'from_email' => $request->string('FromFull.Email', $request->string('from'))->toString(),
-                'from_name' => $request->string('FromFull.Name', 'Email User')->toString(),
+                'from_name' => $request->string('FromFull.Name', __('Email User'))->toString(),
                 'body' => $this->attachmentService->stripQuotedReply(
                     $request->string('TextBody', '')->toString()
                 ),
@@ -170,7 +170,7 @@ class InboundEmailController extends Controller
             $fromHeader = $message->getHeader('From');
 
             $fromEmail = 'unknown@example.com';
-            $fromName = 'Email User';
+            $fromName = __('Email User');
 
             if ($fromHeader && method_exists($fromHeader, 'getAddresses')) {
 

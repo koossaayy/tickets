@@ -49,7 +49,7 @@ new #[Layout('layouts.guest')] class extends Component
         if (! $recaptcha->verify($this->recaptchaToken, 'register')) {
             $this->addError(
                 'email',
-                'Security check failed. Please try again.'
+                __('Security check failed. Please try again.')
             );
 
             return;
@@ -76,15 +76,14 @@ new #[Layout('layouts.guest')] class extends Component
             navigate: true
         );
     }
-};
-?>
+};?>
 
 
 <div>
 
     <div class="mb-7">
         <h1 class="text-xl font-bold text-white">
-            Create your account
+            {{ __('Create your account') }}
         </h1>
     </div>
 
@@ -143,7 +142,7 @@ new #[Layout('layouts.guest')] class extends Component
                 for="name"
                 class="auth-label"
             >
-                Full Name
+                {{ __('Full Name') }}
             </label>
 
 
@@ -157,7 +156,7 @@ new #[Layout('layouts.guest')] class extends Component
 
                 autocomplete="name"
 
-                placeholder="Jane Smith"
+                placeholder="{{ __('Jane Smith') }}"
 
                 class="auth-input block w-full rounded-lg px-4 py-2.5 text-sm focus:outline-none"
 
@@ -186,7 +185,7 @@ new #[Layout('layouts.guest')] class extends Component
                 for="email"
                 class="auth-label"
             >
-                Email Address
+                {{ __('Email Address') }}
             </label>
 
 
@@ -230,7 +229,7 @@ new #[Layout('layouts.guest')] class extends Component
                 for="password"
                 class="auth-label"
             >
-                Password
+                {{ __('Password') }}
             </label>
 
 
@@ -244,7 +243,7 @@ new #[Layout('layouts.guest')] class extends Component
 
                 autocomplete="new-password"
 
-                placeholder="Strong Password Required (min 12 char)"
+                placeholder="{{ __('Strong Password Required (min 12 char)') }}"
 
                 class="auth-input block w-full rounded-lg px-4 py-2.5 text-sm focus:outline-none"
 
@@ -276,7 +275,7 @@ new #[Layout('layouts.guest')] class extends Component
                 for="password_confirmation"
                 class="auth-label"
             >
-                Confirm Password
+                {{ __('Confirm Password') }}
             </label>
 
 
@@ -291,7 +290,7 @@ new #[Layout('layouts.guest')] class extends Component
 
                 autocomplete="new-password"
 
-                placeholder="Repeat your password"
+                placeholder="{{ __('Repeat your password') }}"
 
                 class="auth-input block w-full rounded-lg px-4 py-2.5 text-sm focus:outline-none"
 
@@ -327,7 +326,7 @@ new #[Layout('layouts.guest')] class extends Component
 
             <span wire:loading.remove wire:target="register">
 
-                Create Account
+                {{ __('Create Account') }}
 
             </span>
 
@@ -368,7 +367,7 @@ new #[Layout('layouts.guest')] class extends Component
                 </svg>
 
 
-                Creating account…
+                {{ __('Creating account…') }}
 
             </span>
 
@@ -382,14 +381,14 @@ new #[Layout('layouts.guest')] class extends Component
 
     <p class="auth-footer">
 
-        Already have an account?
+        {{ __('Already have an account?') }}
 
         <a
             href="{{ route('login') }}"
             
             class="auth-link font-medium ml-1"
         >
-            Sign in
+            {{ __('Sign in') }}
         </a>
 
     </p>

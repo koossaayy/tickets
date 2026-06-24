@@ -8,11 +8,9 @@ Thank you for contacting support. We received your ticket **"{{ $ticket->title }
 **Current status:** {{ $ticket->status->label() }}
 
 <x-mail::button :url="$url">
-View Your Ticket
+{{ __('View Your Ticket') }}
 </x-mail::button>
 
-You can also reply to this email to add updates to your ticket.
-
-Thanks,<br>
+{{ __('You can also reply to this email to add updates to your ticket. Thanks,') }}<br>
 {{ config('app.name') }}
 </x-mail::message>

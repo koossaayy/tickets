@@ -8,11 +8,9 @@ There is a new reply on ticket **"{{ $ticket->title }}"** from **{{ $reply->auth
 @endcomponent
 
 <x-mail::button :url="$url">
-View Conversation
+{{ __('View Conversation') }}
 </x-mail::button>
 
-Reply to this email to continue the conversation.
-
-Thanks,<br>
+{{ __('Reply to this email to continue the conversation. Thanks,') }}<br>
 {{ config('app.name') }}
 </x-mail::message>

@@ -18,7 +18,7 @@ class TicketSubmittedMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Support Ticket Submitted: '.$this->ticket->title,
+            subject: __('Support Ticket Submitted: :title', ['title' => $this->ticket->title]),
             replyTo: [$this->ticket->replyEmailAddress()],
         );
     }

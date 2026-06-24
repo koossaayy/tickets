@@ -8,7 +8,7 @@
         'green' => 'bg-green-100 text-green-800',
         'gray' => 'bg-gray-100 text-gray-800',
     ];
-    $colorClass = $colors[$status->color()] ?? $colors['gray'];
+    $colorClass = $colors[$status->color()] ?? $colors[__('gray')];
 @endphp
 
 <span {{ $attributes->merge(['class' => "inline-flex rounded-full px-2.5 py-0.5 text-xs font-semibold {$colorClass}"]) }}>

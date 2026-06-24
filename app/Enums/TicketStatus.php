@@ -13,11 +13,11 @@ enum TicketStatus: string
     public function label(): string
     {
         return match ($this) {
-            self::Open => 'Open',
-            self::InProcess => 'In Process',
-            self::Assigned => 'Assigned',
-            self::Completed => 'Completed',
-            self::Closed => 'Closed',
+            self::Open => __('Open'),
+            self::InProcess => __('In Process'),
+            self::Assigned => __('Assigned'),
+            self::Completed => __('Completed'),
+            self::Closed => __('Closed'),
         };
     }
 
