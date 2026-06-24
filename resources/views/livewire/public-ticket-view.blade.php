@@ -177,7 +177,7 @@
                                 {{ $ticket->assignee ? substr($ticket->assignee->name, 0, 1) : '?' }}
                             </div>
                             <span class="text-sm font-semibold text-slate-700">
-                                {{ $ticket->assignee ? $ticket->assignee->name : 'Unassigned' }}
+                                {{ $ticket->assignee ? $ticket->assignee->name : 'Unassigned'}}
                             </span>
                         </div>
                     </div>
