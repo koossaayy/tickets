@@ -196,6 +196,7 @@
                         </span>
                         <p class="text-[10px] text-slate-400 mt-1">{{ __('Send mail to this address to post replies directly.') }}</p>
                         <p class="text-[10px] text-slate-400 mt-1">Hello world</p>
+                        <p class="text-[10px] text-slate-400 mt-1">Again, maybe it will work this time</p>
                     </div>
                 </div>
             </div>
