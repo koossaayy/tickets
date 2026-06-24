@@ -22,6 +22,26 @@ Designed for SaaS applications and support teams requiring a complete customer s
 
 ---
 
+## Installation
+
+This application is a standard Laravel 13 application. Follow the steps below to install a local copy.
+
+### Requirements
+
+- PHP 8.3+
+- Composer
+- Node.js & npm
+- MySQL / MariaDB (or compatible database)
+
+### Install
+
+Clone the repository:
+
+```bash
+git clone https://github.com/kevin-rounsavelle/laravel-tickets.git
+
+cd laravel-tickets
+
 # Features
 
 ## User Dashboard
