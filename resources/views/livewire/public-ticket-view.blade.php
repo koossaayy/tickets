@@ -177,7 +177,7 @@
                                 {{ $ticket->assignee ? substr($ticket->assignee->name, 0, 1) : '?' }}
                             </div>
                             <span class="text-sm font-semibold text-slate-700">
-                                {{ $ticket->assignee ? $ticket->assignee->name : 'Unassigned'}}
+                                {{ $ticket->assignee ? $ticket->assignee->name : __('Unassigned')}}
                             </span>
                         </div>
                     </div>
@@ -195,8 +195,8 @@
                             {{ $ticket->replyEmailAddress() }}
                         </span>
                         <p class="text-[10px] text-slate-400 mt-1">{{ __('Send mail to this address to post replies directly.') }}</p>
-                        <p class="text-[10px] text-slate-400 mt-1">Hello world</p>
-                        <p class="text-[10px] text-slate-400 mt-1">Again, maybe it will work this time</p>
+                        <p class="text-[10px] text-slate-400 mt-1">{{ __('Hello world') }}</p>
+                        <p class="text-[10px] text-slate-400 mt-1">{{ __('Again, maybe it will work this time') }}</p>
                     </div>
                 </div>
             </div>
