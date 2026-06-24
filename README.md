@@ -239,9 +239,9 @@ http://localhost:8000
 
 | Role | Email | Password |
 |---|---|---|
-| Admin | admin@support.local | password |
-| Agent | agent@support.local | password |
-| Customer | user1@example.com | password |
+| Admin | admin@support.local | Password12345# |
+| Agent | agent@support.local | Password12345# |
+| Customer | user1@example.com | Password12345# |
 
 
 Additional users are created during seeding.
