@@ -280,13 +280,19 @@ Configure your provider to send:
 POST /webhooks/inbound-email
 ```
 
+---
+
+All providers must include a header field called: X-Webhook-Secret
+This value must be set as .env variable: INBOUND_WEBHOOK_SECRET
+
+---
+
 Supported payload formats:
 
 Generic JSON:
 
 ```json
 {
-"reply_token":"TOKEN",
 "from_email":"customer@example.com",
 "from_name":"Customer",
 "body":"Reply text"
@@ -298,6 +304,7 @@ Mailgun:
 ```
 recipient
 sender
+from
 body-plain
 ```
 
@@ -309,6 +316,20 @@ FromFull
 TextBody
 ```
 
+Postmark:
+
+```
+ToFull
+FromFull
+TextBody
+```
+
+Cloudflare
+
+```
+recipient
+raw
+```
 
 ---
 
