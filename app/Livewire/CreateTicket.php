@@ -56,7 +56,7 @@ class CreateTicket extends Component
 
         $notificationService->ticketSubmitted($ticket);
 
-        session()->flash('status', 'Your support ticket has been submitted. Check your email for confirmation.');
+        session()->flash('status', __('Your support ticket has been submitted. Check your email for confirmation.'));
 
         $this->redirectRoute('tickets.show', $ticket, navigate: true);
     }

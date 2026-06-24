@@ -20,7 +20,7 @@ new #[Layout('layouts.guest')] class extends Component
         $this->validate();
 
         if (! $recaptcha->verify($this->recaptchaToken, 'login')) {
-            $this->addError('form.email', 'Security check failed. Please try again.');
+            $this->addError('form.email', __('Security check failed. Please try again.'));
             return;
         }
 
@@ -30,13 +30,13 @@ new #[Layout('layouts.guest')] class extends Component
 
         $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
     }
-}; ?>
+};?>
 
 <div>
     <!-- Page heading -->
     <div class="mb-7">
-        <h1 class="text-xl font-bold text-white">Welcome back</h1>
-        <p class="text-sm text-slate-400 mt-1">Sign in to your account to continue</p>
+        <h1 class="text-xl font-bold text-white">{{ __('Welcome back') }}</h1>
+        <p class="text-sm text-slate-400 mt-1">{{ __('Sign in to your account to continue') }}</p>
     </div>
 
     <!-- Session Status -->
@@ -65,7 +65,7 @@ new #[Layout('layouts.guest')] class extends Component
         <input type="hidden" wire:model="recaptchaToken">
         <!-- Email Address -->
         <div>
-            <label for="email" class="auth-label">Email Address</label>
+            <label for="email" class="auth-label">{{ __('Email Address') }}</label>
             <input wire:model="form.email"
                    id="email"
                    type="email"
@@ -83,10 +83,10 @@ new #[Layout('layouts.guest')] class extends Component
         <!-- Password -->
         <div>
             <div class="flex items-center justify-between mb-1">
-                <label for="password" class="auth-label" style="margin-bottom:0;">Password</label>
+                <label for="password" class="auth-label" style="margin-bottom:0;">{{ __('Password') }}</label>
                 @if (Route::has('password.request'))
                     <a href="{{ route('password.request') }}" class="auth-link text-xs">
-                        Forgot password?
+                        {{ __('Forgot password?') }}
                     </a>
                 @endif
             </div>
@@ -111,25 +111,25 @@ new #[Layout('layouts.guest')] class extends Component
                    name="remember"
                    class="checkbox-custom rounded">
             <label for="remember" class="text-sm text-slate-400 cursor-pointer select-none">
-                Keep me signed in
+                {{ __('Keep me signed in') }}
             </label>
         </div>
 
         <!-- Submit -->
         <button type="submit" class="auth-btn w-full mt-2">
-            <span wire:loading.remove wire:target="login">Sign In</span>
+            <span wire:loading.remove wire:target="login">{{ __('Sign In') }}</span>
             <span wire:loading wire:target="login" class="flex items-center justify-center gap-2">
                 <svg class="animate-spin h-4 w-4" fill="none" viewBox="0 0 24 24">
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                     <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
                 </svg>
-                Signing in…
+                {{ __('Signing in…') }}
             </span>
         </button>
     </form>
 
     <!-- Divider -->
-    <div class="auth-divider my-6">or continue with</div>
+    <div class="auth-divider my-6">{{ __('or continue with') }}</div>
 
     <!-- Social Buttons -->
     <div class="grid grid-cols-2 gap-3">
@@ -152,7 +152,7 @@ new #[Layout('layouts.guest')] class extends Component
 
     <!-- Register link -->
     <p class="auth-footer">
-        Don't have an account?
-        <a href="{{ route('register') }}" class="auth-link font-medium ml-1">Create one free</a>
+        {{ __("Don't have an account?") }}
+        <a href="{{ route('register') }}" class="auth-link font-medium ml-1">{{ __('Create one free') }}</a>
     </p>
 </div>

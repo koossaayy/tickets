@@ -20,7 +20,7 @@ class TicketReplyReceivedMail extends Mailable
         $ticket = $this->reply->ticket;
 
         return new Envelope(
-            subject: 'New Reply on Ticket: '.$ticket->title,
+            subject: __('New Reply on Ticket: :title', ['title' => $ticket->title]),
             replyTo: [$ticket->replyEmailAddress()],
         );
     }

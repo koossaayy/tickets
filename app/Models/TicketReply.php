@@ -43,6 +43,6 @@ class TicketReply extends Model
             return $this->user->name;
         }
 
-        return $this->author_name ?? 'Guest';
+        return $this->author_name ?? __('Guest');
     }
 }

@@ -63,18 +63,18 @@ class PublicTicketView extends Component
         TicketNotificationService $notificationService,
         RecaptchaService $recaptcha,
     ): void {
-        abort_if($this->ticket->status->value === 'closed', 403, 'This ticket is closed.');
+        abort_if($this->ticket->status->value === 'closed', 403, __('This ticket is closed.'));
 
         $this->validate();
 
         abort_unless(
             strtolower($this->author_email) === strtolower($this->ticket->user->email),
             403,
-            'Email must match the ticket owner.'
+            __('Email must match the ticket owner.')
         );
 
         if (! $recaptcha->verify($this->recaptchaToken, 'ticket_reply')) {
-            $this->addError('body', 'Security check failed. Please try again.');
+            $this->addError('body', __('Security check failed. Please try again.'));
             return;
         }
 
@@ -96,7 +96,7 @@ class PublicTicketView extends Component
         $this->reset(['body', 'attachments']);
         $this->ticket->refresh()->load(['replies.user', 'replies.attachments']);
 
-        session()->flash('status', 'Your reply has been posted.');
+        session()->flash('status', __('Your reply has been posted.'));
     }
 
     public function render(): View

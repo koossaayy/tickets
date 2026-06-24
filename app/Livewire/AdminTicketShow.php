@@ -73,7 +73,7 @@ class AdminTicketShow extends Component
 
         $this->ticket->refresh()->load(['user', 'assignee']);
 
-        session()->flash('status', 'Ticket status updated.');
+        session()->flash('status', __('Ticket status updated.'));
     }
 
     public function reply(
@@ -102,7 +102,7 @@ class AdminTicketShow extends Component
         $this->reset(['body', 'attachments']);
         $this->ticket->refresh()->load(['replies.user', 'replies.attachments']);
 
-        session()->flash('status', 'Admin reply posted.');
+        session()->flash('status', __('Admin reply posted.'));
     }
 
     public function render(): View

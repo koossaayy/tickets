@@ -40,12 +40,12 @@
                         <div>
                             @auth
                                 <a href="{{ route('dashboard') }}" class="text-sm font-semibold text-slate-600 hover:text-slate-900 flex items-center gap-1.5 transition-colors">
-                                    Go to Dashboard
+                                    {{ __('Go to Dashboard') }}
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                                 </a>
                             @else
                                 <a href="{{ route('login') }}" class="text-sm font-semibold text-indigo-600 hover:text-indigo-700 flex items-center gap-1.5 transition-colors">
-                                    Sign In
+                                    {{ __('Sign In') }}
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14"/></svg>
                                 </a>
                             @endauth
@@ -59,7 +59,7 @@
             </div>
             
             <footer class="relative z-10 border-t border-slate-200/50 bg-white/40 py-6 text-center text-xs text-slate-500">
-                <p>&copy; {{ date('Y') }} {{ config('app.name') }}. All rights reserved.</p>
+                <p>&copy; {{ __(':param_1 :param_2. All rights reserved.', ['param_1' => date('Y'), 'param_2' => config('app.name')]) }}</p>
             </footer>
         </div>
     </body>

@@ -176,10 +176,10 @@
             <a href="{{ url('/') }}" class="inline-flex items-center gap-3 group">
                 <div class="brand-dot group-hover:scale-110 transition-transform"></div>
                 <span class="text-2xl font-bold tracking-tight text-white">
-                    Support<span class="text-indigo-400">Desk</span>
+                    {{ __('Support') }}<span class="text-indigo-400">{{ __('Desk') }}</span>
                 </span>
             </a>
-            <p class="mt-2 text-slate-500 text-sm">Customer support, simplified.</p>
+            <p class="mt-2 text-slate-500 text-sm">{{ __('Customer support, simplified.') }}</p>
         </div>
 
         <!-- Card -->
@@ -189,7 +189,7 @@
 
         <!-- Footer -->
         <p class="mt-8 text-xs text-slate-600">
-            &copy; {{ date('Y') }} SupportDesk. All rights reserved.
+            &copy; {{ __(':param_1 SupportDesk. All rights reserved.', ['param_1' => date('Y')]) }}
         </p>
     </div>
 

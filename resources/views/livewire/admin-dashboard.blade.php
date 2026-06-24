@@ -5,11 +5,11 @@
                 <h2 class="font-bold text-2xl text-slate-900 leading-tight">
                     {{ __('Support Queue') }}
                 </h2>
-                <p class="text-sm text-slate-500 mt-1">Manage and assign customer issues</p>
+                <p class="text-sm text-slate-500 mt-1">{{ __('Manage and assign customer issues') }}</p>
             </div>
             <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-violet-50 border border-violet-200 text-xs font-semibold text-violet-700">
                 <span class="h-2 w-2 rounded-full bg-violet-500 animate-pulse"></span>
-                Admin Console Active
+                {{ __('Admin Console Active') }}
             </span>
         </div>
     </x-slot>
@@ -29,7 +29,7 @@
                     <div class="absolute -right-4 -bottom-4 text-amber-50 group-hover:scale-110 transition-transform pointer-events-none">
                         <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
                     </div>
-                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Active Queue</p>
+                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">{{ __('Active Queue') }}</p>
                     <h3 class="text-3xl font-extrabold text-amber-600 mt-2">
                         {{ ($counts['open'] ?? 0) + ($counts['in_process'] ?? 0) + ($counts['assigned'] ?? 0) }}
                     </h3>
@@ -39,7 +39,7 @@
                     <div class="absolute -right-4 -bottom-4 text-rose-50 group-hover:scale-110 transition-transform pointer-events-none">
                         <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
                     </div>
-                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Unassigned Tickets</p>
+                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">{{ __('Unassigned Tickets') }}</p>
                     <h3 class="text-3xl font-extrabold text-rose-600 mt-2 flex items-center gap-2">
                         {{ $unassignedCount }}
                         @if ($unassignedCount > 0)
@@ -52,7 +52,7 @@
                     <div class="absolute -right-4 -bottom-4 text-emerald-50 group-hover:scale-110 transition-transform pointer-events-none">
                         <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                     </div>
-                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Resolved</p>
+                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">{{ __('Resolved') }}</p>
                     <h3 class="text-3xl font-extrabold text-emerald-600 mt-2">{{ $counts['completed'] ?? 0 }}</h3>
                 </div>
 
@@ -60,7 +60,7 @@
                     <div class="absolute -right-4 -bottom-4 text-slate-50 group-hover:scale-110 transition-transform pointer-events-none">
                         <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2zm0-4H7V7h10v2zm0 8H7v-2h10v2z"/></svg>
                     </div>
-                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Total Tickets</p>
+                    <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">{{ __('Total Tickets') }}</p>
                     <h3 class="text-3xl font-extrabold text-slate-700 mt-2">{{ array_sum($counts) }}</h3>
                 </div>
             </div>
@@ -74,14 +74,14 @@
                             <span class="absolute inset-y-0 left-0 flex items-center ps-3 text-slate-400 pointer-events-none">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
                             </span>
-                            <x-text-input wire:model.live.debounce.300ms="search" id="search" class="block w-full ps-9 rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500 text-sm" type="search" placeholder="Search title, description, customer name or email..." />
+                            <x-text-input wire:model.live.debounce.300ms="search" id="search" class="block w-full ps-9 rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500 text-sm" type="search" placeholder="{{ __('Search title, description, customer name or email...') }}" />
                         </div>
                     </div>
                     <div>
                         <x-input-label for="statusFilter" :value="__('Status Filter')" class="text-slate-500 font-semibold" />
                         <select wire:model.live="statusFilter" id="statusFilter"
                                 class="mt-1 block w-full rounded-xl border-slate-200 focus:border-indigo-500 focus:ring-indigo-500 text-sm shadow-sm">
-                            <option value="">All Statuses</option>
+                            <option value="">{{ __('All Statuses') }}</option>
                             @foreach ($statuses as $status)
                                 <option value="{{ $status->value }}">{{ $status->label() }}</option>
                             @endforeach
@@ -96,13 +96,13 @@
                     <table class="min-w-full divide-y divide-slate-100">
                         <thead class="bg-slate-50/50">
                             <tr>
-                                <th class="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-slate-400">Ticket Details</th>
-                                <th class="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-slate-400">Customer</th>
-                                <th class="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-slate-400">Assignee</th>
-                                <th class="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-slate-400">Status</th>
-                                <th class="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-slate-400">Replies</th>
-                                <th class="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-slate-400">Updated</th>
-                                <th class="px-6 py-4 text-right text-xs font-semibold uppercase tracking-wider text-slate-400">Action</th>
+                                <th class="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-slate-400">{{ __('Ticket Details') }}</th>
+                                <th class="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-slate-400">{{ __('Customer') }}</th>
+                                <th class="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-slate-400">{{ __('Assignee') }}</th>
+                                <th class="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-slate-400">{{ __('Status') }}</th>
+                                <th class="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-slate-400">{{ __('Replies') }}</th>
+                                <th class="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-slate-400">{{ __('Updated') }}</th>
+                                <th class="px-6 py-4 text-right text-xs font-semibold uppercase tracking-wider text-slate-400">{{ __('Action') }}</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-slate-100 bg-white">
@@ -113,7 +113,7 @@
                                             <span class="font-semibold text-slate-900 text-sm truncate">
                                                 <a href="{{ route('admin.tickets.show', $ticket) }}" wire:navigate>{{ $ticket->title }}</a>
                                             </span>
-                                            <span class="text-xs text-slate-400 mt-1">#{{ $ticket->id }} · opened {{ $ticket->created_at->format('M j, Y') }}</span>
+                                            <span class="text-xs text-slate-400 mt-1">{{ __('#:param_1 · opened :param_2', ['param_1' => $ticket->id, 'param_2' => $ticket->created_at->format('M j, Y')]) }}</span>
                                         </div>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
@@ -129,7 +129,7 @@
                                                 {{ $ticket->assignee->name }}
                                             </span>
                                         @else
-                                            <span class="text-slate-400 italic text-xs">Unassigned</span>
+                                            <span class="text-slate-400 italic text-xs">{{ __('Unassigned') }}</span>
                                         @endif
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
@@ -142,7 +142,7 @@
                                                 {{ $ticket->replies_count }}
                                             </span>
                                         @else
-                                            <span class="text-xs text-slate-400">0 replies</span>
+                                            <span class="text-xs text-slate-400">{{ __('0 replies') }}</span>
                                         @endif
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">
@@ -151,7 +151,7 @@
                                     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                         <a href="{{ route('admin.tickets.show', $ticket) }}" wire:navigate 
                                            class="inline-flex items-center justify-center rounded-lg border border-slate-200 px-3 py-1.5 text-xs font-semibold text-slate-700 bg-white hover:bg-slate-50 hover:text-slate-900 transition-all">
-                                            Manage
+                                            {{ __('Manage') }}
                                         </a>
                                     </td>
                                 </tr>
@@ -162,8 +162,8 @@
                                             <div class="p-3 rounded-2xl bg-slate-50 text-slate-400 mb-4 border border-slate-100">
                                                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0a2 2 0 01-2 2H6a2 2 0 01-2-2m16 0V9a2 2 0 00-2-2H6a2 2 0 00-2 2v2m16 4h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 15H4"/></svg>
                                             </div>
-                                            <h4 class="font-bold text-slate-800 text-base">All caught up</h4>
-                                            <p class="text-xs text-slate-400 mt-1 leading-relaxed">No tickets found matching the search criteria or status filter.</p>
+                                            <h4 class="font-bold text-slate-800 text-base">{{ __('All caught up') }}</h4>
+                                            <p class="text-xs text-slate-400 mt-1 leading-relaxed">{{ __('No tickets found matching the search criteria or status filter.') }}</p>
                                         </div>
                                     </td>
                                 </tr>

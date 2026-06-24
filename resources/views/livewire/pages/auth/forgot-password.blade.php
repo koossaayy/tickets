@@ -21,7 +21,7 @@ new #[Layout('layouts.guest')] class extends Component
         ]);
 
         if (! $recaptcha->verify($this->recaptchaToken, 'reset_password')) {
-            $this->addError('email', 'Security check failed. Please try again.');
+            $this->addError('email', __('Security check failed. Please try again.'));
             return;
         }
 
@@ -42,14 +42,14 @@ new #[Layout('layouts.guest')] class extends Component
 
         session()->flash('status', __($status));
     }
-}; ?>
+};?>
 
 <div>
     <!-- Page heading -->
     <div class="mb-7">
-        <h1 class="text-xl font-bold text-white">Reset your password</h1>
+        <h1 class="text-xl font-bold text-white">{{ __('Reset your password') }}</h1>
         <p class="text-sm text-slate-400 mt-1">
-            Enter your email and we'll send you a secure reset link.
+            {{ __("Enter your email and we'll send you a secure reset link.") }}
         </p>
     </div>
 
@@ -83,7 +83,7 @@ new #[Layout('layouts.guest')] class extends Component
         <input type="hidden" wire:model="recaptchaToken">
         <!-- Email Address -->
         <div>
-            <label for="email" class="auth-label">Email Address</label>
+            <label for="email" class="auth-label">{{ __('Email Address') }}</label>
             <input wire:model="email"
                    id="email"
                    type="email"
@@ -100,20 +100,20 @@ new #[Layout('layouts.guest')] class extends Component
 
         <!-- Submit -->
         <button type="submit" class="auth-btn w-full">
-            <span wire:loading.remove wire:target="sendPasswordResetLink">Send Reset Link</span>
+            <span wire:loading.remove wire:target="sendPasswordResetLink">{{ __('Send Reset Link') }}</span>
             <span wire:loading wire:target="sendPasswordResetLink" class="flex items-center justify-center gap-2">
                 <svg class="animate-spin h-4 w-4" fill="none" viewBox="0 0 24 24">
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                     <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
                 </svg>
-                Sending…
+                {{ __('Sending…') }}
             </span>
         </button>
     </form>
 
     <!-- Back to login -->
     <p class="auth-footer">
-        Remember your password?
-        <a href="{{ route('login') }}" class="auth-link font-medium ml-1">Sign in</a>
+        {{ __('Remember your password?') }}
+        <a href="{{ route('login') }}" class="auth-link font-medium ml-1">{{ __('Sign in') }}</a>
     </p>
 </div>
