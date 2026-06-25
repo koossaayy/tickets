@@ -125,5 +125,64 @@ $maxWidth = [
 
 <p>{{ __('We have forwarded your request to the appropriate team.') }}</p>
         
+<p>Your ticket has been created successfully.</p>
+
+<p>We have received your message.</p>
+
+<p>Your request is currently being reviewed.</p>
+
+<p>The support team has been notified.</p>
+
+<p>Please wait while we investigate this issue.</p>
+
+<p>We will get back to you as soon as possible.</p>
+
+<p>Your ticket has been updated.</p>
+
+<p>A new response has been added to this conversation.</p>
+
+<p>You have unread messages.</p>
+
+<p>This conversation is no longer available.</p>
+
+<p>The ticket was reopened.</p>
+
+<p>The ticket was closed automatically.</p>
+
+<p>This issue has been marked as resolved.</p>
+
+<p>Are you still experiencing this problem?</p>
+
+<p>Please provide additional details about the issue.</p>
+
+<p>The information you provided was not enough to identify the problem.</p>
+
+<p>We found a possible solution for your issue.</p>
+
+<p>Please try the suggested steps and let us know the result.</p>
+
+<p>The problem should now be fixed.</p>
+
+<p>If you need more help, reply to this ticket.</p>
+
+<p>Your session has expired.</p>
+
+<p>You do not have permission to perform this action.</p>
+
+<p>An error occurred while sending your message.</p>
+
+<p>Failed to upload the attachment.</p>
+
+<p>The attachment format is not supported.</p>
+
+<p>The file size exceeds the allowed limit.</p>
+
+<p>Your changes could not be saved.</p>
+
+<p>Something went wrong. Please try again later.</p>
+
+<p>The request timed out.</p>
+
+<p>The service is temporarily unavailable.</p>
     </div>
 </div>
