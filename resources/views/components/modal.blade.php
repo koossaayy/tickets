@@ -74,6 +74,6 @@ $maxWidth = [
         x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
     >
         {{ $slot }}
-        <p>Trigger</p>
+        <p>{{ __('Trigger') }}</p>
     </div>
 </div>
