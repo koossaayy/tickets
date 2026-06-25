@@ -19,7 +19,7 @@ $maxWidth = [
         show: @js($show),
         focusables() {
             // All focusable element types...
-            let selector = '{{ __("a, button, input:not([type='hidden']), textarea, select, details, [tabindex]:not([tabindex='-1'])") }}'
+            let selector = 'a, button, input:not([type='hidden']), textarea, select, details, [tabindex]:not([tabindex='-1'])'
             return [...$el.querySelectorAll(selector)]
                 // All non-disabled elements...
                 .filter(el => ! el.hasAttribute('disabled'))
@@ -74,5 +74,6 @@ $maxWidth = [
         x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
     >
         {{ $slot }}
+        <p>Trigger</p>
     </div>
 </div>
