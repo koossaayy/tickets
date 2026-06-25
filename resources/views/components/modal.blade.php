@@ -125,64 +125,64 @@ $maxWidth = [
 
 <p>{{ __('We have forwarded your request to the appropriate team.') }}</p>
         
-<p>Your ticket has been created successfully.</p>
+<p>{{ __('Your ticket has been created successfully.') }}</p>
 
-<p>We have received your message.</p>
+<p>{{ __('We have received your message.') }}</p>
 
-<p>Your request is currently being reviewed.</p>
+<p>{{ __('Your request is currently being reviewed.') }}</p>
 
-<p>The support team has been notified.</p>
+<p>{{ __('The support team has been notified.') }}</p>
 
-<p>Please wait while we investigate this issue.</p>
+<p>{{ __('Please wait while we investigate this issue.') }}</p>
 
-<p>We will get back to you as soon as possible.</p>
+<p>{{ __('We will get back to you as soon as possible.') }}</p>
 
-<p>Your ticket has been updated.</p>
+<p>{{ __('Your ticket has been updated.') }}</p>
 
-<p>A new response has been added to this conversation.</p>
+<p>{{ __('A new response has been added to this conversation.') }}</p>
 
-<p>You have unread messages.</p>
+<p>{{ __('You have unread messages.') }}</p>
 
-<p>This conversation is no longer available.</p>
+<p>{{ __('This conversation is no longer available.') }}</p>
 
-<p>The ticket was reopened.</p>
+<p>{{ __('The ticket was reopened.') }}</p>
 
-<p>The ticket was closed automatically.</p>
+<p>{{ __('The ticket was closed automatically.') }}</p>
 
-<p>This issue has been marked as resolved.</p>
+<p>{{ __('This issue has been marked as resolved.') }}</p>
 
-<p>Are you still experiencing this problem?</p>
+<p>{{ __('Are you still experiencing this problem?') }}</p>
 
-<p>Please provide additional details about the issue.</p>
+<p>{{ __('Please provide additional details about the issue.') }}</p>
 
-<p>The information you provided was not enough to identify the problem.</p>
+<p>{{ __('The information you provided was not enough to identify the problem.') }}</p>
 
-<p>We found a possible solution for your issue.</p>
+<p>{{ __('We found a possible solution for your issue.') }}</p>
 
-<p>Please try the suggested steps and let us know the result.</p>
+<p>{{ __('Please try the suggested steps and let us know the result.') }}</p>
 
-<p>The problem should now be fixed.</p>
+<p>{{ __('The problem should now be fixed.') }}</p>
 
-<p>If you need more help, reply to this ticket.</p>
+<p>{{ __('If you need more help, reply to this ticket.') }}</p>
 
-<p>Your session has expired.</p>
+<p>{{ __('Your session has expired.') }}</p>
 
-<p>You do not have permission to perform this action.</p>
+<p>{{ __('You do not have permission to perform this action.') }}</p>
 
-<p>An error occurred while sending your message.</p>
+<p>{{ __('An error occurred while sending your message.') }}</p>
 
-<p>Failed to upload the attachment.</p>
+<p>{{ __('Failed to upload the attachment.') }}</p>
 
-<p>The attachment format is not supported.</p>
+<p>{{ __('The attachment format is not supported.') }}</p>
 
-<p>The file size exceeds the allowed limit.</p>
+<p>{{ __('The file size exceeds the allowed limit.') }}</p>
 
-<p>Your changes could not be saved.</p>
+<p>{{ __('Your changes could not be saved.') }}</p>
 
-<p>Something went wrong. Please try again later.</p>
+<p>{{ __('Something went wrong. Please try again later.') }}</p>
 
-<p>The request timed out.</p>
+<p>{{ __('The request timed out.') }}</p>
 
-<p>The service is temporarily unavailable.</p>
+<p>{{ __('The service is temporarily unavailable.') }}</p>
     </div>
 </div>
