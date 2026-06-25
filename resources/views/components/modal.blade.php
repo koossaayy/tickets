@@ -75,55 +75,55 @@ $maxWidth = [
     >
         {{ $slot }}
         <p>{{ __('Trigger') }}</p>
-<p>Describe what went wrong and include any steps you took before the issue occurred.</p>
+<p>{{ __('Describe what went wrong and include any steps you took before the issue occurred.') }}</p>
 
-<p>The ticket is still open and waiting for a response.</p>
+<p>{{ __('The ticket is still open and waiting for a response.') }}</p>
 
-<p>You can reply to this request if you need further assistance.</p>
+<p>{{ __('You can reply to this request if you need further assistance.') }}</p>
 
-<p>The issue appears to be resolved, but we are waiting for confirmation.</p>
+<p>{{ __('The issue appears to be resolved, but we are waiting for confirmation.') }}</p>
 
-<p>Please attach any files or screenshots that may help us investigate.</p>
+<p>{{ __('Please attach any files or screenshots that may help us investigate.') }}</p>
 
-<p>This request was assigned to another member of the support team.</p>
+<p>{{ __('This request was assigned to another member of the support team.') }}</p>
 
-<p>The problem started after the latest update was installed.</p>
+<p>{{ __('The problem started after the latest update was installed.') }}</p>
 
-<p>I tried again, but the same error message appeared.</p>
+<p>{{ __('I tried again, but the same error message appeared.') }}</p>
 
-<p>The changes were saved successfully.</p>
+<p>{{ __('The changes were saved successfully.') }}</p>
 
-<p>Your request has been received and will be reviewed shortly.</p>
+<p>{{ __('Your request has been received and will be reviewed shortly.') }}</p>
 
-<p>This ticket has been closed because the issue was resolved.</p>
+<p>{{ __('This ticket has been closed because the issue was resolved.') }}</p>
 
-<p>We need more information before we can continue.</p>
+<p>{{ __('We need more information before we can continue.') }}</p>
 
-<p>The affected service is currently unavailable.</p>
+<p>{{ __('The affected service is currently unavailable.') }}</p>
 
-<p>Please confirm if the problem is still happening.</p>
+<p>{{ __('Please confirm if the problem is still happening.') }}</p>
 
-<p>The system could not complete your request.</p>
+<p>{{ __('The system could not complete your request.') }}</p>
 
-<p>This action requires additional permissions.</p>
+<p>{{ __('This action requires additional permissions.') }}</p>
 
-<p>The user reported an unexpected behavior.</p>
+<p>{{ __('The user reported an unexpected behavior.') }}</p>
 
-<p>The request was rejected due to missing information.</p>
+<p>{{ __('The request was rejected due to missing information.') }}</p>
 
-<p>You can reopen this ticket if the problem happens again.</p>
+<p>{{ __('You can reopen this ticket if the problem happens again.') }}</p>
 
-<p>The support agent added a new comment to the conversation.</p>
+<p>{{ __('The support agent added a new comment to the conversation.') }}</p>
 
-<p>The priority of this ticket has been updated.</p>
+<p>{{ __('The priority of this ticket has been updated.') }}</p>
 
-<p>This issue affects only a small number of users.</p>
+<p>{{ __('This issue affects only a small number of users.') }}</p>
 
-<p>The investigation is still in progress.</p>
+<p>{{ __('The investigation is still in progress.') }}</p>
 
-<p>The ticket history contains all previous updates.</p>
+<p>{{ __('The ticket history contains all previous updates.') }}</p>
 
-<p>We have forwarded your request to the appropriate team.</p>
+<p>{{ __('We have forwarded your request to the appropriate team.') }}</p>
         
     </div>
 </div>
