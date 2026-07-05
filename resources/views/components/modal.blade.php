@@ -187,18 +187,18 @@ $maxWidth = [
 
     </div>
     <div>
-        <p>Your ticket has been submitted successfully.</p>
-<p>Thank you for reaching out. Our team will get back to you within 24 hours.</p>
-<p>Your ticket has been assigned to a support specialist.</p>
-<p>An agent has replied to your ticket.</p>
-<p>The status of your ticket has changed to In Progress.</p>
-<p>Awaiting customer response.</p>
-<p>We consider this issue resolved. If you need further assistance, please reply to this thread.</p>
-<p>This ticket has been automatically closed due to inactivity.</p>
-<p>How would you rate the support you received today?</p>
-<p>Please provide a detailed description of the issue you are experiencing.</p>
-<p>Attachments cannot exceed 20MB.</p>
-<p>Are you sure you want to delete this ticket? This action cannot be undone.</p>
-<p>Knowledge base article suggestions based on your issue.</p>
+        <p>{{ __('Your ticket has been submitted successfully.') }}</p>
+<p>{{ __('Thank you for reaching out. Our team will get back to you within 24 hours.') }}</p>
+<p>{{ __('Your ticket has been assigned to a support specialist.') }}</p>
+<p>{{ __('An agent has replied to your ticket.') }}</p>
+<p>{{ __('The status of your ticket has changed to In Progress.') }}</p>
+<p>{{ __('Awaiting customer response.') }}</p>
+<p>{{ __('We consider this issue resolved. If you need further assistance, please reply to this thread.') }}</p>
+<p>{{ __('This ticket has been automatically closed due to inactivity.') }}</p>
+<p>{{ __('How would you rate the support you received today?') }}</p>
+<p>{{ __('Please provide a detailed description of the issue you are experiencing.') }}</p>
+<p>{{ __('Attachments cannot exceed 20MB.') }}</p>
+<p>{{ __('Are you sure you want to delete this ticket? This action cannot be undone.') }}</p>
+<p>{{ __('Knowledge base article suggestions based on your issue.') }}</p>
     </div>
 </div>
