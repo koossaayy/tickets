@@ -5,8 +5,8 @@
         </h2>
         <p class="text-sm text-slate-500 mt-1">{{ __("Describe your issue and we'll get back to you as soon as possible.") }}</p>
         <p class="text-sm text-slate-500 mt-1">{{ __('Made possible by Koussay') }}</p>
-        <p class="text-sm text-slate-500 mt-1">Deleting the old one, and adding a new line.</p>
-        <p class="text-sm text-slate-500 mt-1">And new one.</p>
+        <p class="text-sm text-slate-500 mt-1">{{ __('Deleting the old one, and adding a new line.') }}</p>
+        <p class="text-sm text-slate-500 mt-1">{{ __('And new one.') }}</p>
     </x-slot>
 
     <div class="py-8">
