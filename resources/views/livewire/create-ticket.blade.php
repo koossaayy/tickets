@@ -7,7 +7,7 @@
         <p class="text-sm text-slate-500 mt-1">{{ __('Made possible by Koussay') }}</p>
         <p class="text-sm text-slate-500 mt-1">{{ __('Deleting the old one, and adding a new line.') }}</p>
         <p class="text-sm text-slate-500 mt-1">{{ __('And new one.') }}</p>
-        <p class="text-sm text-slate-500 mt-1">Maybe yes, but I don't know.</p>
+        <p class="text-sm text-slate-500 mt-1">{{ __("Maybe yes, but I don't know.") }}</p>
     </x-slot>
 
     <div class="py-8">
