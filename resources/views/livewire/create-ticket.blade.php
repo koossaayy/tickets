@@ -5,6 +5,7 @@
         </h2>
         <p class="text-sm text-slate-500 mt-1">{{ __("Describe your issue and we'll get back to you as soon as possible.") }}</p>
         <p class="text-sm text-slate-500 mt-1">{{ __('Made possible by Koussay') }}</p>
+        <p class="text-sm text-slate-500 mt-1">Testing the new workflow</p>
     </x-slot>
 
     <div class="py-8">
