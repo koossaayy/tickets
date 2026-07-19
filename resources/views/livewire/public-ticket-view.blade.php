@@ -203,6 +203,7 @@
     </div>
     <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 space-y-3">
     <h4 class="font-semibold text-amber-900">Livewire Test Area</h4>
+    <h4 class="font-semibold text-amber-900">Hello World</h4>
 
     <input
         type="text"
