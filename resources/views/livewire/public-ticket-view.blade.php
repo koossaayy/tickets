@@ -201,4 +201,35 @@
             </div>
         </div>
     </div>
+    <div class="rounded-xl border border-amber-200 bg-amber-50 p-4 space-y-3">
+    <h4 class="font-semibold text-amber-900">Livewire Test Area</h4>
+
+    <input
+        type="text"
+        wire:model.live="author_name"
+        placeholder="Type here..."
+        class="w-full rounded-lg border-slate-300"
+    />
+
+    <div class="text-sm text-slate-600">
+        Current value:
+        <span class="font-bold">{{ $author_name }}</span>
+    </div>
+
+    <button
+        wire:click="reply"
+        type="button"
+        class="px-4 py-2 bg-indigo-600 text-white rounded-lg"
+    >
+        Test Action
+    </button>
+
+    <div wire:loading class="text-indigo-600 text-sm">
+        Loading...
+    </div>
+
+    <div wire:loading.remove class="text-green-600 text-sm">
+        Idle
+    </div>
+</div>
 </div>
