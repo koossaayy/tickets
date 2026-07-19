@@ -233,4 +233,105 @@
         {{ __('Idle') }}
     </div>
 </div>
+<div class="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 space-y-6">
+
+    <div class="flex items-center justify-between">
+        <div>
+            <h3 class="text-xl font-bold text-slate-900">Demo Components</h3>
+            <p class="text-sm text-slate-500">Testing layout and responsiveness.</p>
+        </div>
+
+        <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-xs font-semibold">
+            Active
+        </span>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-4">
+        <div class="rounded-xl border p-4">
+            <div class="text-xs uppercase text-slate-400">Users</div>
+            <div class="mt-2 text-3xl font-bold">2,481</div>
+            <div class="text-green-600 text-sm mt-1">↑ 12%</div>
+        </div>
+
+        <div class="rounded-xl border p-4">
+            <div class="text-xs uppercase text-slate-400">Tickets</div>
+            <div class="mt-2 text-3xl font-bold">183</div>
+            <div class="text-red-600 text-sm mt-1">↓ 4%</div>
+        </div>
+
+        <div class="rounded-xl border p-4">
+            <div class="text-xs uppercase text-slate-400">Response Time</div>
+            <div class="mt-2 text-3xl font-bold">14m</div>
+            <div class="text-slate-500 text-sm mt-1">Average</div>
+        </div>
+    </div>
+
+    <div class="space-y-3">
+
+        <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border">
+            <div class="h-10 w-10 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold">
+                J
+            </div>
+
+            <div class="flex-1">
+                <div class="flex justify-between">
+                    <h4 class="font-semibold">John Doe</h4>
+                    <span class="text-xs text-slate-400">2 min ago</span>
+                </div>
+
+                <p class="mt-2 text-sm text-slate-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                    finibus, nisl quis vestibulum tempus, libero justo hendrerit
+                    turpis, vitae ultrices nulla neque sed elit.
+                </p>
+
+                <div class="flex gap-2 mt-3">
+                    <span class="px-2 py-1 rounded bg-indigo-100 text-indigo-700 text-xs">Support</span>
+                    <span class="px-2 py-1 rounded bg-slate-200 text-slate-700 text-xs">Priority</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border">
+            <div class="h-10 w-10 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold">
+                A
+            </div>
+
+            <div class="flex-1">
+                <div class="flex justify-between">
+                    <h4 class="font-semibold">Alice Smith</h4>
+                    <span class="text-xs text-slate-400">Yesterday</span>
+                </div>
+
+                <p class="mt-2 text-sm text-slate-600">
+                    Curabitur blandit tempus porttitor. Maecenas faucibus mollis
+                    interdum.
+                </p>
+
+                <div class="mt-4 flex gap-3">
+                    <button class="px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700">
+                        Accept
+                    </button>
+
+                    <button class="px-4 py-2 rounded-lg border hover:bg-slate-100">
+                        Reject
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="rounded-xl bg-slate-100 p-5">
+        <div class="flex justify-between mb-2">
+            <span class="font-medium">Storage Usage</span>
+            <span>74%</span>
+        </div>
+
+        <div class="w-full h-3 rounded-full bg-slate-200 overflow-hidden">
+            <div class="h-full w-3/4 bg-indigo-600 rounded-full"></div>
+        </div>
+    </div>
+
+</div>
 </div>
