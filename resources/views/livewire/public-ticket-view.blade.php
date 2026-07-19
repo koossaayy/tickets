@@ -331,4 +331,160 @@
     </div>
 
 </div>
+
+<div class="bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden">
+
+    <div class="px-6 py-5 border-b bg-gradient-to-r from-indigo-600 to-indigo-500 text-white">
+        <h3 class="text-xl font-bold">Project Overview</h3>
+        <p class="text-indigo-100 text-sm mt-1">
+            Internal dashboard preview
+        </p>
+    </div>
+
+    <div class="p-6 space-y-8">
+
+        <!-- Team -->
+        <div>
+            <h4 class="font-semibold text-slate-800 mb-4">Team Members</h4>
+
+            <div class="space-y-4">
+
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-red-500 text-white flex items-center justify-center font-bold">
+                            M
+                        </div>
+
+                        <div>
+                            <div class="font-semibold">Michael Scott</div>
+                            <div class="text-sm text-slate-500">Project Manager</div>
+                        </div>
+                    </div>
+
+                    <span class="px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold">
+                        Online
+                    </span>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold">
+                            S
+                        </div>
+
+                        <div>
+                            <div class="font-semibold">Sarah Connor</div>
+                            <div class="text-sm text-slate-500">Backend Engineer</div>
+                        </div>
+                    </div>
+
+                    <span class="px-3 py-1 rounded-full bg-yellow-100 text-yellow-700 text-xs font-semibold">
+                        Away
+                    </span>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-purple-500 text-white flex items-center justify-center font-bold">
+                            D
+                        </div>
+
+                        <div>
+                            <div class="font-semibold">David Miller</div>
+                            <div class="text-sm text-slate-500">Designer</div>
+                        </div>
+                    </div>
+
+                    <span class="px-3 py-1 rounded-full bg-slate-200 text-slate-700 text-xs font-semibold">
+                        Offline
+                    </span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Tasks -->
+        <div>
+            <div class="flex justify-between items-center mb-4">
+                <h4 class="font-semibold text-slate-800">Recent Tasks</h4>
+
+                <button class="text-indigo-600 text-sm font-medium hover:underline">
+                    View all
+                </button>
+            </div>
+
+            <div class="divide-y border rounded-xl">
+
+                <div class="p-4 flex justify-between items-center">
+                    <div>
+                        <div class="font-medium">Implement authentication</div>
+                        <div class="text-sm text-slate-500">
+                            Assigned to Sarah
+                        </div>
+                    </div>
+
+                    <span class="text-green-600 font-semibold">
+                        Complete
+                    </span>
+                </div>
+
+                <div class="p-4 flex justify-between items-center">
+                    <div>
+                        <div class="font-medium">Design landing page</div>
+                        <div class="text-sm text-slate-500">
+                            Assigned to David
+                        </div>
+                    </div>
+
+                    <span class="text-amber-600 font-semibold">
+                        In Progress
+                    </span>
+                </div>
+
+                <div class="p-4 flex justify-between items-center">
+                    <div>
+                        <div class="font-medium">Prepare deployment</div>
+                        <div class="text-sm text-slate-500">
+                            Assigned to Michael
+                        </div>
+                    </div>
+
+                    <span class="text-slate-500 font-semibold">
+                        Pending
+                    </span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Activity -->
+        <div>
+            <h4 class="font-semibold text-slate-800 mb-4">Latest Activity</h4>
+
+            <div class="relative border-l-2 border-slate-200 ml-3 space-y-6">
+
+                <div class="relative pl-8">
+                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-indigo-600"></div>
+                    <div class="font-medium">New ticket created</div>
+                    <div class="text-sm text-slate-500">5 minutes ago</div>
+                </div>
+
+                <div class="relative pl-8">
+                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-green-500"></div>
+                    <div class="font-medium">Deployment completed</div>
+                    <div class="text-sm text-slate-500">Yesterday</div>
+                </div>
+
+                <div class="relative pl-8">
+                    <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-orange-500"></div>
+                    <div class="font-medium">Database backup finished</div>
+                    <div class="text-sm text-slate-500">2 days ago</div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
 </div>
